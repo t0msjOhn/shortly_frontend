@@ -8,7 +8,7 @@ export default function UrlList({ urlList, deleteLink }) {
 
     async function handleDelete(code) {
         try {
-            await axios.delete(`http://localhost:3000/api/links/${code}`);
+            await axios.delete(`https://url-shortener-backend-grk1.onrender.com/api/links/${code}`);
             deleteLink(code);
             alert("Link deleted Successfully");
         } catch (err) {
@@ -19,7 +19,7 @@ export default function UrlList({ urlList, deleteLink }) {
 
     async function viewStats(code) {
         try {
-            const response = await axios.get(`http://localhost:3000/api/stats/${code}`);
+            const response = await axios.get(`https://url-shortener-backend-grk1.onrender.com/api/stats/${code}`);
             const data = response.data;
 
             setStats(data);
