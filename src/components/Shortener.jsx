@@ -2,7 +2,7 @@ import { useState } from "react"
 import PulseLoader from "react-spinners/PulseLoader";
 import axios from "axios";
 
-const apiUrl = "https://url-shortener-backend-grk1.onrender.com";
+const apiUrl = "https://shortly-bgtu.onrender.com";
 
 export default function Shortener(props) {
   const [input, setInput] = useState("");
