@@ -8,7 +8,7 @@ export default function UrlList({ urlList, deleteLink }) {
 
     async function handleDelete(code) {
         try {
-            await axios.delete(`https://url-shortener-backend-grk1.onrender.com/api/links/${code}`);
+            await axios.delete(`https://shortly-bgtu.onrender.com/api/links/${code}`);
             deleteLink(code);
             alert("Link deleted Successfully");
         } catch (err) {
@@ -19,7 +19,7 @@ export default function UrlList({ urlList, deleteLink }) {
 
     async function viewStats(code) {
         try {
-            const response = await axios.get(`https://url-shortener-backend-grk1.onrender.com/api/stats/${code}`);
+            const response = await axios.get(`https://shortly-bgtu.onrender.com/api/stats/${code}`);
             const data = response.data;
 
             setStats(data);
@@ -83,7 +83,7 @@ export default function UrlList({ urlList, deleteLink }) {
                                     <h3 className="text-lg font-semibold mb-2 text-center">Link Statistics</h3>
                                     <ul className="text-left list-none">
                                         <li>Original URL: <a target="_blank" href={stats.url}>{stats.url}</a></li>
-                                        <li>Shortened URL:<a target="_blank" href={`https://url-shortener-backend-grk1.onrender.com/${stats.slug}`}>http://localhost:3000/{stats.slug}</a></li>
+                                        <li>Shortened URL:<a target="_blank" href={`https://shortly-bgtu.onrender.com/${stats.slug}`}>http://localhost:3000/{stats.slug}</a></li>
                                         <li>Clicks: {stats.clicks}</li>
                                         <li>Created At: {stats.created_at}</li>
                                         <li>
